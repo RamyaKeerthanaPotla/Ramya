@@ -1,0 +1,126 @@
+
+<div class="container">
+
+  <div class="jumbotron">
+      <img [src]="ME.picture" style="width: 75px;" class="rounded" />
+    <h5 id="greetings" class="display-4">Hello {{ME.name}}!
+    </h5>
+  </div>
+    
+    <div class = "row">
+      <div class ="col-md-3">
+        <div class="card" style="width: 20rem;">
+          <div class="card-header">
+            Sunday
+          </div>
+          <ul class="list-group list-group-flush">
+         <li *ngFor= "let x of ME.sunday; index as i ">{{x}}</li>
+          </ul>
+          <button (click)='edit("sunday")'>Edit</button>
+        </div> 
+      </div>
+
+
+      <div class ="col-md-3">
+          <div class="card" style="width: 20rem;">
+              <div class="card-header">
+                Monday
+              </div>
+              <ul class="list-group list-group-flush">
+                <li *ngFor= "let x of ME.monday; index as i ">{{x}}</li>
+              </ul>
+              <button (click)='edit("monday")'>Edit</button>
+            </div> 
+      </div>
+
+
+      <div class ="col-md-3">
+          <div class="card" style="width: 20rem;">
+              <div class="card-header">
+                Tuesday
+              </div>
+              <ul class="list-group list-group-flush">
+                <li *ngFor= "let x of ME.tuesday; index as i ">{{x}}</li>
+              </ul>
+              <button (click)='edit("tuesday")'>Edit</button>
+            </div> 
+      </div>
+
+
+      <div class ="col-md-3">
+          <div class="card" style="width: 20rem;">
+              <div class="card-header">
+                Wensday
+              </div>
+              <ul class="list-group list-group-flush">
+                <li *ngFor= "let x of ME.wensday; index as i ">{{x}}</li>
+              </ul>
+              <button (click)='edit("wensday")'>Edit</button>
+            </div> 
+      </div>
+
+
+    </div>
+
+
+    <div class = "row">
+        <div class ="col-md-3">
+          <div class="card" style="width: 20rem;">
+            <div class="card-header">
+              Thursday
+            </div>
+            <ul class="list-group list-group-flush">
+              <li *ngFor= "let x of ME.thursday; index as i ">{{x}}</li>
+            </ul>
+            <button (click)='edit("thursday")'>Edit</button>
+          </div> 
+        </div>
+  
+  
+        <div class ="col-md-3">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header">
+                  Friday
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li *ngFor= "let x of ME.firday; index as i ">{{x}}</li>
+                </ul>
+                <button (click)='edit("friday")'>Edit</button>
+              </div> 
+        </div>
+  
+  
+        <div class ="col-md-3">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header">
+                  Saturday
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li *ngFor= "let x of ME.saturday; index as i ">{{x}}</li>
+                </ul>
+                <button (click)='edit("saturday")'>Edit</button>
+              </div> 
+        </div>
+  
+  
+        <div class ="col-md-3">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header">
+                  Users
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li *ngFor= "let x of ME.users; index as i ">{{x.name}}</li>
+                </ul>
+              </div> 
+        </div>
+  
+  
+      </div>
+
+
+
+
+
+
+  <a class="btn btn-primary" (click)="logout()">Log out</a>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+  <div id="grad" class="jumbotron">
+    <h1 class="display-3">Edit </h1>
+    <hr class="my-4">
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+      <li *ngFor="let x of this.thisDay" >{{x}}</li>
+
+      </ul>
+
+    </div>
+
+    <div class = "col-md-6">
+      Suggested Exercises:
+      <ul id= "exercises">
+        <li *ngFor="let x of ME.myExercises;index as i" (click)=add(i)>{{x.name}}</li>
+      </ul>
+      Enter Your Exercise:
+      <form >
+        <input type="text" [(ngModel)]="temp" name="temp">
+        <button (click)="check()" >submit</button>
+      </form>
+
+    </div>
+
+  </div>
+  <button (click)="save()">Save</button>
+</div>
+<!--
+<script>
+  var doc = document.getElementById("exercises").innerHTML
+  for (i=0; i < ME.myExercises.length;i++)
+  {
+    document.getElementById("exercises").innerHTML= document.getElementById("exercises").innerHTML+ "<li>works</li>"
+  }
+</script>
+-->
