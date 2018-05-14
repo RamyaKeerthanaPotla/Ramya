@@ -7,7 +7,7 @@ describe('LoginService', () => {
     TestBed.configureTestingModule({
       providers: [LoginService]
     });
-  });
+  }); 
 
   it('should be created', inject([LoginService], (service: LoginService) => {
     expect(service).toBeTruthy();

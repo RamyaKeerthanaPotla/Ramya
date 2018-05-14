@@ -2,31 +2,20 @@ import { Exercise } from "./Exercise";
 import { Http } from "@angular/http";
 import { list } from "./profileList";
 import {Observable} from 'rxjs';
+
 export class Profile {
   tempList : list;
-  constructor(n: string, ID: string, pic: string, private http:Http) {
+  constructor(n: string, ID: string, pic: string, private http:Http){
     this.name = n;
-    this.id = ID;
+    this.id =ID;
     this.picture = pic;
     this.ngOnInit()
+
   }
-  ngOnInit() {
-//    console.log("in on init")
-//   this.http.get("http://localhost:3001/exercises/list").subscribe(data =>{
-//    this.temp = data.json();
 
-//   });
-//   if (this.temp){
-//   this.temp.forEach(element => {
-//     console.log(element);
-//     this.myExercises.push(new Exercise(element));
-//   });
-//  }
-//  this.users = new list ().allProfiles;
-//   setInterval(()=> this.update(), 1000)
-// not working
+  ngOnInit(){
 
-  }  
+  }
   users:Profile[]=[];;
   temp :string[]=[];;
   sunday: string []=[];;
@@ -39,16 +28,18 @@ export class Profile {
   id: string="";
   picture: string="";
   name: string="";
+  fbid: string="";
   exerciseList: Exercise[]=[];
-  myExercises: Exercise[]=[new Exercise("Swimming"),new Exercise("Running"),new Exercise("Jummping Jacks"),];
+  myExercises: Exercise[]=[new Exercise("Swimming"),new Exercise("Running"),new Exercise("Jummping Jacks"),new Exercise("Cycling"), new Exercise("Zumba"),new Exercise("Scrambling")];
   modDat:string="";
   friends: string[]=[];
-  update()
-  {
 
+  update(){
 
   }
 }
+
+
 
 export class Image {
   id: string;

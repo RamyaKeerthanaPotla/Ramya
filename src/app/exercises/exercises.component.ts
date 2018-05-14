@@ -34,13 +34,13 @@ export class ExercisesComponent implements OnInit {
           this.thisDay = ME.monday;
         }
 
-    
+
     if (ME.modDat == "tuesday")
           {
             this.thisDay = ME.tuesday;
           }
-    
-    if (ME.modDat == "wensday")
+
+    if (ME.modDat == "wednesday")
             {
               this.thisDay = ME.wensday;
             }
@@ -48,38 +48,37 @@ export class ExercisesComponent implements OnInit {
               {
                 this.thisDay = ME.thursday;
               }
-      
-          
+
+
           if (ME.modDat == "friday")
                 {
                   this.thisDay = ME.friday;
                 }
-          
+
           if (ME.modDat == "saturday")
                   {
                     this.thisDay = ME.saturday;
                   }
   }
 
-    save()
-    {
+    save(){
       if (ME.modDat == "sunday")
         {
-          ME.sunday =this.thisDay 
+          ME.sunday =this.thisDay
         }
-  
+
       if (ME.modDat == "monday")
           {
-            ME.monday=this.thisDay 
+            ME.monday=this.thisDay
           }
-  
-      
+
+
       if (ME.modDat == "tuesday")
             {
               ME.tuesday= this.thisDay ;
             }
-      
-      if (ME.modDat == "wensday")
+
+      if (ME.modDat == "wednesday")
               {
                 ME.wensday=this.thisDay ;
               }
@@ -87,29 +86,25 @@ export class ExercisesComponent implements OnInit {
                 {
                   ME.thursday= this.thisDay ;
                 }
-        
-            
+
+
             if (ME.modDat == "friday")
                   {
                     ME.friday=this.thisDay ;
                   }
-            
+
             if (ME.modDat == "saturday")
                     {
                       ME.saturday=this.thisDay ;
                     }
-
+          this.router.navigate(["/user"]);
     }
-  add(temp:number)
-  {
+  add(temp:number){
     console.log(temp);
     this.thisDay.push(this.ME.myExercises[temp].name);
-
-
   }
 
-  check()
-  {
+  check(){
     console.log(this.temp+"  "+this.lastExercise );
     if (this.temp == this.lastExercise)
       {
@@ -125,8 +120,7 @@ export class ExercisesComponent implements OnInit {
 
   }
 
-  remove(temp:string)
-  {
+  remove(temp:string){
     this.thisDay.splice( this.thisDay.lastIndexOf(temp), 1);
   }
 

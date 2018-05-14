@@ -1,7 +1,11 @@
 const list = [
-    "Swimming",
+    
     "Running",
+    "Swimming",
     "Jumpping Jacks",
+    "Cycling",
+    "Zumba",
+    "Scrambling",
     "Skipping"
 ]
 

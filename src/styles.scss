@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~bootstrap/scss/bootstrap";
-$primary-background: rgb(96, 206, 160);
-$secondary-background:rgb(167, 236, 206);
+$primary-background: rgb(43, 4, 0);
+$secondary-background:rgb(216, 43, 23);
 $dark: #042e1d;
 $monospace: "Courier New",
 Courier,
@@ -149,7 +149,7 @@ header {
     .card-body {
         flex: 1 1 auto;
         padding: 0.5rem;
-        background: #98ebcf;
+        background: #c2c8ce;
     }
     .btn-primary {
         font-family: $monospace;
@@ -169,7 +169,7 @@ output {
 }
 
 .footer-distributed {
-    background-color: #042e1d; //	box-shadow: 0 1px 1px 0 rgba(3, 82, 58, 0.12);
+    background-color: #212529; //	box-shadow: 0 1px 1px 0 rgba(3, 82, 58, 0.12);
     box-sizing: border-box;
     width: 100%;
     text-align: left;

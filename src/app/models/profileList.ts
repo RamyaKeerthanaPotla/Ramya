@@ -4,19 +4,15 @@ import { Http } from "@angular/http";
 export class list {
     http:Http;
     allProfiles : Profile[]=[new Profile("Tester1","1313","dsdsd",this.http)];
-    constructor()
-    {
+    constructor(){
         console.log("in constructor")
-        this.http.get("localhost:3001/profiles/allProfs").subscribe(data =>{
+        this.http.get("localhost:3000/user/allProfs").subscribe(data =>{
             this.allProfiles = data.json();
             console.log(data)
         })
     }
 
-    init()
-    {
-
-
+    init(){
     }
 
 
